@@ -1,5 +1,4 @@
 let carrier = document.getElementById("number")
-// carrier.pattern = "([\+](234)|0)(701|708|802|808|812|901|902|907)[0-9]+"
 let image = document.querySelector(".image-class img")
 
 function displayImage() {
@@ -33,22 +32,6 @@ function displayImage() {
     let carrierNumberZoomMobile = ["0707", "+234707"]
     let carrierNumberZoomMobileFound = carrierNumberZoomMobile.some(number => carrierNumber.startsWith(number))
 
-    // firstNum = carrierNumber.substring(0, 4)
-    // console.log(carrierNumber)
-    // console.log(firstNum)
-
-    // let carrierNumber9mobile = "0809"|| "0817" || "0818" ||"0908" || "0909"
-    // xo = carrierNumber.startsWith([x], 1) || carrierNumber.startsWith([x], 5)
-    
-    // switch (carrierNumber) {
-    //     case carrierNumberMtnFound:
-    //         console.log("mtn")
-    //         break;
-    //     default:
-    //         console.log("null")
-    //         break;
-    // }
-
     if (carrierNumberMtnFound) {
         image.src = "images/mtn.jpg"
     } else if (carrierNumberGloFound) {
@@ -68,27 +51,6 @@ function displayImage() {
     }  else {
         image.src = "images/null.png"
     }  
-    
-    // if (carrierNumberMtn.includes(firstNum)) {
-    //     console.log("mtn")
-    // } else if (carrierNumberGlo.includes(firstNum)) {
-    //     console.log("glo")
-    // } else if (carrierNumberAirtel.includes(firstNum)) {
-    //     console.log("airtel")
-    // } else if (carrierNumber9mobile.includes(firstNum)) {
-    //     console.log("9mobile")
-    // } else if (carrierNumberNtel.includes(firstNum)) {
-    //     console.log("ntel")
-    // } else if (carrierNumberSmile.includes(firstNum)) {
-    //     console.log("smile")
-    // } else if (carrierNumberMultilinks.includes(firstNum)) {
-    //     console.log("multilinks")
-    // } else if (carrierNumberZoomMobile.includes(firstNum)) {
-    //     console.log("zoom mobile")
-    // }  else {
-    //     console.log("null")
-    // }  
-
 }
 
 carrier.addEventListener("input", displayImage)
