@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Phonie</title>
+  </head>
+  <body>
+    <main>
+      <h1>Phonie</h1>
+      <div class="container">
+        <form>
+          <label for="name">Name</label>
+          <input id="name" placeholder="Full Name" required/>
+          <label for="email">Email</label>
+          <input id="email" type="email"/>
+          <label for="number">Phone Number</label>
+          <div id="num-input">
+            <input type="tel" id="number" pattern = "([\+](234)|0)(701|708|802|808|812|901|902|907)[0-9]+" autocomplete="tel" required/>
+            <div class="image-class" alt="carrier image">
+              <img src="images/null.png">
+            </div>
+          </div>
+          <button>Submit</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
